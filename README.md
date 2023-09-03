@@ -13,13 +13,11 @@
 > But we can neither know the present position nor get response on where
 > it has moved after an instruction is passed.
 >
-> ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image1.png){width="6.268054461942257in"
-> height="0.5680544619422572in"}
+> ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image1.png)
 >
 > **[Given Reactor Schematic:]{.underline}**
 >
-> ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image2.png){width="4.229166666666667in"
-> height="4.041666666666667in"}
+> ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image2.png)
 >
 > **[ANS:]{.underline}** Initially, we have no information on where the
 > drone is, i.e., it can be anywhere in the cells that are open (Not
@@ -36,8 +34,7 @@ Consider issuing the command \`DOWN\'. While you don\'t know exactly
 where the drone is, you can say where it isn\'t - it isn\'t, for
 instance, in the top left corner anymore.
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image3.png){width="6.268054461942257in"
-height="0.5777766841644795in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image3.png)
 
 **[ANS:]{.underline}** After passing few instructions and altering the
 states we can observe that the drone is more likely to be stuck at a
@@ -86,11 +83,9 @@ to determine exactly where the drone is, and
 
 thus, be able to use it to shut down the reactor.
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image6.png){width="2.3333333333333335in"
-height="0.49027777777777776in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image6.png)
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image7.png){width="2.4166666666666665in"
-height="0.44722222222222224in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image7.png)
 
 We can find the exact location here as, whatever possible move we take
 here converges the probabilities (rest of the moves\[up, down\] get
@@ -100,8 +95,7 @@ ends of the grid.
 One optimal way of doing it moving completely left 9 times or right 9
 times.
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image8.png){width="6.268054461942257in"
-height="3.404166666666667in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image8.png)
 
 I have understood the statement "many ways to formulate this" can't get
 any better than this question,
@@ -140,8 +134,7 @@ Then I observed the approach #1 was right and accurate but just slow,
 which was the similar case we faced in for agent 2,3 in Project 1:Ghosts
 in the maze.
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image9.png){width="2.561111111111111in"
-height="2.525in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image9.png)
 
 > This is BFS, which to find the shortest path to a goal opened these
 > many nodes(visited) represented in orange
@@ -154,8 +147,7 @@ actual heuristic, we make the A\* open much fewer nodes but the
 trade-off is ,it does not guarantee the optimal or shortest path,
 Effectively making it into a Best First Search Algorithm.
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image10.png){width="2.459722222222222in"
-height="2.4152766841644793in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image10.png)
 
 > Here, we can see that Best First Search, though it did not give the
 > very best possible path, it opened way lesser nodes
@@ -221,27 +213,22 @@ non-optimum with the trade-off being the computational time.
 
 The Sequence of steps for given question is:
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image2.png){width="2.015277777777778in"
-height="1.925in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image2.png)
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image11.png){width="4.1819444444444445in"
-height="1.6291666666666667in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image11.png)
 
 **[Representation and Final Result:]{.underline}**
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image12.png){width="2.075in"
-height="2.0652766841644796in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image12.png)
 
 An in-between state with cold and hotspots denoted accordingly from cyan
 being least likely to red being most likely
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image13.png){width="1.9916666666666667in"
-height="1.9805555555555556in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image13.png)
 
 The point at which it converges in the end
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image14.png){width="6.268054461942257in"
-height="2.191666666666667in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image14.png)
 
 Strategy to implement a maze generator which would be depending on the
 following statements:
@@ -284,13 +271,11 @@ Also having a ,maze structure with walls blocking most of the cells when
 any direction move help to reduce the number of cell converging and
 therefore maximize the number of steps required.
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image15.png){width="2.725in"
-height="2.7180555555555554in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image15.png)
 
 Shortest path calculated by A\*
 
-![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image16.png){width="2.658333333333333in"
-height="2.6374989063867016in"}
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image16.png)
 
 Shortest Path by Best First Search
 
