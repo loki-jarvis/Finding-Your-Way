@@ -1,25 +1,25 @@
 # Finding Your Way
 > **Environment:**
->
-> In the give environment we have a maze similar to that of project 1
-> and our objective is to find a submarine drone with probability
-> 1,using which we are required to shut down a hijacked nuclear reactor.
->
-> The repair sub drone is capable of moving from cell to cell within the
-> reactor. However, there is a catch here, we actually don't know at any
-> point of time where exactly the drone is at, due to the access methods
-> we gained. The only functionality we have achieved is being able to
-> pass on instructions to the drone in which direction it should move.
-> But we can neither know the present position nor get response on where
-> it has moved after an instruction is passed.
->
-> ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image1.png)
->
-> **[Given Reactor Schematic:]{.underline}**
->
+
+In the given environment we have a maze similar to that of Project 1
+and our objective is to find a submarine drone with probability
+1, using which we are required to shut down a hijacked nuclear reactor.
+
+The repair sub-drone is capable of moving from cell to cell within the
+reactor. However, there is a catch here, we actually don't know at any
+point in time where exactly the drone is, due to the access methods
+we gained. The only functionality we have achieved is being able to
+pass instructions to the drone in which direction it should move.
+But we can neither know the present position nor get a response on where
+it has moved after an instruction is passed.
+
+![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image1.png)
+
+## Given Reactor Schematic
+
 > ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image2.png)
 >
-> **[ANS:]{.underline}** Initially, we have no information on where the
+> **[ANS:]** Initially, we have no information on where the
 > drone is, i.e., it can be anywhere in the cells that are open (Not
 > walls), in the given schematic there are 199 Open cells. Therefore,
 > the Probability that the drone is in the top left corner is 1/199.
@@ -27,8 +27,7 @@
 > This is also the probability with which it can be in any of the open
 > positions initially. So, we can initialize/fill the grid with 1/Open
 > cells as the probability wherever it is Open.
-
-\[Note: If the top-left corner is a wall then probability would be 0\]
+> Note: If the top-left corner is a wall then probability would be 0
 
 Consider issuing the command \`DOWN\'. While you don\'t know exactly
 where the drone is, you can say where it isn\'t - it isn\'t, for
@@ -36,36 +35,23 @@ instance, in the top left corner anymore.
 
 ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image3.png)
 
-**[ANS:]{.underline}** After passing few instructions and altering the
-states we can observe that the drone is more likely to be stuck at a
-wall. More precisely, greater the number of moves(directions), the drone
-can move at a location, the less likely it is going to stay there,
-accordingly wherever there are more walls around the drone restricting
-its movement, the drone is more likely to be there, let's call these
-states the Hotspots.
+> **[ANS:]** After passing few instructions and altering the
+> states we can observe that the drone is more likely to be stuck at a
+> wall. More precisely, greater the number of moves(directions), the drone
+> can move at a location, the less likely it is going to stay there,
+> accordingly wherever there are more walls around the drone restricting
+> its movement, the drone is more likely to be there, let's call these
+> states the Hotspots.
 
 Let's perform the movement "Down" on the forementioned graph as
 suggested and observe what happens:
+> ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image4.png)
 
-+-----------------------------------------------------------------------+
-| > ![](vertopal_bff1eb89f9                                             |
-| 9046c4aaf2c343e0933b39/media/image4.png){width="2.0680555555555555in" |
-| > height="2.05in"}                                                    |
-| >                                                                     |
-| > Initial State of the reactor                                        |
-|                                                                       |
-| +------------------------------------------------------------------+  |
-| | > Here Cyan is the initial cold state but as we pass             |  |
-| | > instructions, we can observe that the probabilities they       |  |
-| | > converge to the Hotspots                                       |  |
-| +==================================================================+  |
-| +------------------------------------------------------------------+  |
-|                                                                       |
-| > ![](vert                                                            |
-| opal_bff1eb89f99046c4aaf2c343e0933b39/media/image5.png){width="2.0in" |
-| > height="1.995832239720035in"}                                       |
-+=======================================================================+
-+-----------------------------------------------------------------------+
+> Initial State of the reactor
+> Here Cyan is the initial cold state but as we pass instructions, we can observe that the probabilities they
+> converge to the Hotspots
+
+> ![](vertopal_bff1eb89f99046c4aaf2c343e0933b39/media/image5.png)
 
 State of the reactor after move "DOWN" is applied.
 
